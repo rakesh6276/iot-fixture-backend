@@ -40,6 +40,8 @@ class Operation(models.Model):
 class Component(models.Model):
     # customer_id = models.AutoField(primary_key=True)
     # component = models.ForeignKey(Component, on_delete=models.CASCADE)
+    machine = models.ForeignKey(Machine, on_delete=models.CASCADE)
+    operation = models.ForeignKey(Operation, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
 
     class Meta:

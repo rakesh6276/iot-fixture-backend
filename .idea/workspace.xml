@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9dcffda-d844-493e-9574-6cd0f4d7c1d4" name="Default Changelist" comment="" />
+    <list default="true" id="a9dcffda-d844-493e-9574-6cd0f4d7c1d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/migrations/0002_auto_20181107_0427.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/serializers.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +20,7 @@
     <session id="-196517608">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.28" value="1" />
@@ -39,13 +47,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="30" />
-          <entry key="py" value="5727" />
+          <entry key="py" value="5869" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="30" />
-          <entry key="Python" value="5727" />
+          <entry key="Python" value="5869" />
         </counts>
       </usages-collector>
     </session>
@@ -55,11 +63,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+            <state relative-caret-position="405">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1541569674790" expanded="true" signature="2198:2203" ph="..." />
+                <marker date="1541591659055" expanded="true" signature="2336:2341" ph="..." />
               </folding>
             </state>
           </provider>
@@ -77,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixture/apiview.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="128">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <marker date="1541589571263" expanded="true" signature="858:861" ph="..." />
@@ -95,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Downloads/components.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="60">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -106,16 +114,16 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="20" />
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1541569674850" expanded="true" signature="404:475" ph="..." />
-                <marker date="1541569674850" expanded="true" signature="586:591" ph="..." />
-                <marker date="1541569674850" expanded="true" signature="602:611" ph="..." />
+                <marker date="1541592519447" expanded="true" signature="596:667" ph="..." />
+                <marker date="1541592519447" expanded="true" signature="778:783" ph="..." />
+                <marker date="1541592519447" expanded="true" signature="794:803" ph="..." />
               </folding>
             </state>
           </provider>
@@ -168,6 +176,9 @@
       <find>GetMachine</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -176,20 +187,21 @@
         <option value="$PROJECT_DIR$/iot_fixture/urls.py" />
         <option value="$PROJECT_DIR$/fixture/views.py" />
         <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/fixture/serializers.py" />
-        <option value="$PROJECT_DIR$/fixture/models.py" />
         <option value="$USER_HOME$/Downloads/components.json" />
         <option value="$PROJECT_DIR$/fixture/apiview.py" />
         <option value="$PROJECT_DIR$/fixture/urls.py" />
+        <option value="$PROJECT_DIR$/fixture/models.py" />
+        <option value="$PROJECT_DIR$/fixture/serializers.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="225" />
-    <option name="y" value="3" />
+    <option name="x" value="84" />
+    <option name="y" value="347" />
     <option name="width" value="1038" />
     <option name="height" value="443" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -330,37 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/components.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/apiview.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1541589571263" expanded="true" signature="858:861" ph="..." />
-            <marker date="1541589571263" expanded="true" signature="1647:1652" ph="..." />
-            <marker date="1541589571263" expanded="true" signature="2128:2133" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1541569674790" expanded="true" signature="2198:2203" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -385,15 +366,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/components.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1541591659055" expanded="true" signature="2336:2341" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <marker date="1541569674850" expanded="true" signature="404:475" ph="..." />
-            <marker date="1541569674850" expanded="true" signature="586:591" ph="..." />
-            <marker date="1541569674850" expanded="true" signature="602:611" ph="..." />
+            <marker date="1541592519447" expanded="true" signature="596:667" ph="..." />
+            <marker date="1541592519447" expanded="true" signature="778:783" ph="..." />
+            <marker date="1541592519447" expanded="true" signature="794:803" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/apiview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1541589571263" expanded="true" signature="858:861" ph="..." />
+            <marker date="1541589571263" expanded="true" signature="1647:1652" ph="..." />
+            <marker date="1541589571263" expanded="true" signature="2128:2133" ph="..." />
           </folding>
         </state>
       </provider>

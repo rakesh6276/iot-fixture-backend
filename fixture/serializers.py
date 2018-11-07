@@ -9,12 +9,20 @@ class MachineSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ComponentSerializer(serializers.ModelSerializer):
+    machine = MachineSerializer(read_only=True)
+    # operation = OperationSerializer(read_only=True)
 
     class Meta:
         model = Component
-        fields = '__all__'
+        fields = (
+            'id',
+            'name',
+            'machine',
+            # 'operation'
+        )
 
 class OperationSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Operation
         fields = '__all__'
