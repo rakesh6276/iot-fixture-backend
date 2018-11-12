@@ -21,12 +21,11 @@ class Machine(models.Model):
     def __str__(self):
         return self.name
 
-
 class Operation(models.Model):
     machine = models.ForeignKey(Machine, on_delete=models.CASCADE)
-    #component = models.ForeignKey(Component, on_delete=models.CASCADE)
-    startTime = models.DateTimeField()
-    endTime = models.DateTimeField()
+    # component = models.OneToOneField(Component, on_delete=models.CASCADE, primary_key=True)
+    start_time = models.DateTimeField()
+    end_time = models.DateTimeField()
     MACHINE_STATUS = (
         ('INACTIVE', 'Inactive'),
         ('ACTIVE', 'Active'),
@@ -37,9 +36,8 @@ class Operation(models.Model):
     class Meta:
         verbose_name_plural = "Operations"
 
+
 class Component(models.Model):
-    # customer_id = models.AutoField(primary_key=True)
-    # component = models.ForeignKey(Component, on_delete=models.CASCADE)
     machine = models.ForeignKey(Machine, on_delete=models.CASCADE)
     operation = models.ForeignKey(Operation, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
@@ -50,6 +48,7 @@ class Component(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Stats(models.Model):
     machine = models.ForeignKey(Machine,null=True, blank=True, on_delete=models.CASCADE)

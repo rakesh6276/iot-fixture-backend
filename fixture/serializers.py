@@ -8,9 +8,28 @@ class MachineSerializer(serializers.ModelSerializer):
         model = Machine
         fields = '__all__'
 
+
+class OperationSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Operation
+        fields = '__all__'
+#
 class ComponentSerializer(serializers.ModelSerializer):
-    machine = MachineSerializer(read_only=True)
-    # operation = OperationSerializer(read_only=True)
+    machine = MachineSerializer()
+
+    class Meta:
+        model = Component
+        fields = (
+            'id',
+            'name',
+            'machine'
+        )
+
+
+class ComponentSerializer1(serializers.ModelSerializer):
+    machine = MachineSerializer()
+    operation = OperationSerializer()
 
     class Meta:
         model = Component
@@ -18,14 +37,9 @@ class ComponentSerializer(serializers.ModelSerializer):
             'id',
             'name',
             'machine',
-            # 'operation'
+            'operation'
         )
 
-class OperationSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Operation
-        fields = '__all__'
 
 class StatSerializer(serializers.ModelSerializer):
     subquery = MachineSerializer(read_only=True, many=True)
@@ -40,8 +54,8 @@ class StatSerializer(serializers.ModelSerializer):
         #     )
         # depth = 1
         fields = '__all__'
-#
-#
+
+
 class StatUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Stats
@@ -53,6 +67,10 @@ class StatUpdateSerializer(serializers.ModelSerializer):
                    "component",
                    "operation"
                    )
+
+
+
+
 
 
 
