@@ -13,6 +13,7 @@ from rest_framework.decorators import api_view
 
 
 
+
 # class StatList(APIView):
 #     def get(self, request):
 #         stats = Stats.objects.all()
@@ -84,7 +85,6 @@ class putComponents(APIView):
         serializer = ComponentSerializer1(snippet)
         return Response(serializer.data)
 
-
     def put(self, request, pk, format=None):
         snippet = self.get_object(pk)
         serializer = ComponentSerializer1(snippet, data=request.data)
@@ -92,3 +92,19 @@ class putComponents(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class getComponents(ListAPIView):
+    queryset = Component.objects.all()
+    serializer_class= ComponentSerializer1
+
+#
+# @api_view(['GET'])
+# def Getoperation(self):
+#     queryset = Machine.objects.all()
+#     # print(queryset)
+#     serializer= OperationSerializer1(queryset, many=True)
+#     return Response(serializer.data)
+#     # print(queryset.query)
+
+

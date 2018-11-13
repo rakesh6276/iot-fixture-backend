@@ -6,6 +6,7 @@ class Machine(models.Model):
     name = models.CharField(max_length=100)
     current_machine = models.CharField(max_length=100)
     current_operation = models.CharField(max_length=100)
+    # previous_operations =
     MACHINE_STATUS = (
         ('INACTIVE', 'Inactive'),
         ('ACTIVE', 'Active'),

@@ -37,6 +37,8 @@ class ComponentSerializer1(serializers.ModelSerializer):
             'id',
             'name',
             'machine',
+            # 'start_time',
+            # 'end_time',
             'operation'
         )
 
@@ -68,7 +70,13 @@ class StatUpdateSerializer(serializers.ModelSerializer):
                    "operation"
                    )
 
-
+# class OperationSerializer1(serializers.ModelSerializer):
+#     Machine = MachineSerializer()
+#     # component = ComponentSerializer1()
+#
+#     class Meta:
+#         model = Component
+#         fields = '__all__'
 
 
 

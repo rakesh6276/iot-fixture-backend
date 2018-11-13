@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'fixture',
     'rest_framework',
+    'drf_multiple_model',
 
 ]
 
@@ -72,6 +73,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'iot_fixture.wsgi.application'
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+}
+
 
 
 # Database
