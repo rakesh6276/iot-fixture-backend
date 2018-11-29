@@ -24,24 +24,7 @@ class ComponentSerializer(serializers.ModelSerializer):
             'id',
             'name',
             'machine'
-        )
-
-
-class ComponentSerializer1(serializers.ModelSerializer):
-    machine = MachineSerializer()
-    operation = OperationSerializer()
-
-    class Meta:
-        model = Component
-        fields = (
-            'id',
-            'name',
-            'machine',
-            # 'start_time',
-            # 'end_time',
-            'operation'
-        )
-
+    )
 
 class StatSerializer(serializers.ModelSerializer):
     subquery = MachineSerializer(read_only=True, many=True)
@@ -70,14 +53,38 @@ class StatUpdateSerializer(serializers.ModelSerializer):
                    "operation"
                    )
 
-# class OperationSerializer1(serializers.ModelSerializer):
-#     Machine = MachineSerializer()
+class ComponentSerializer1(serializers.ModelSerializer):
+    # current_operation = models.CharField(max_length=100)
+    machine = MachineSerializer()
+    operation = OperationSerializer()
+
+    class Meta:
+        model = Component
+        fields = (
+            'id',
+            # 'name',
+            'machine',
+            # 'current_operation',
+            # 'start_time',
+            # 'end_time',
+            'operation'
+        )
+
+
+# class ComponentSerializer2(serializers.ModelSerializer):
+#     machine = MachineSerializer()
 #     # component = ComponentSerializer1()
 #
 #     class Meta:
 #         model = Component
-#         fields = '__all__'
-
+#         fields = (
+#             'id',
+#             # 'name',
+#             'machine'
+#             # 'Machine_current_operation',
+#             # 'machine__created_date',
+#             # 'machine__modified_date'
+#         )
 
 
 

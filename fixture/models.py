@@ -39,7 +39,7 @@ class Operation(models.Model):
 
 
 class Component(models.Model):
-    machine = models.ForeignKey(Machine, on_delete=models.CASCADE)
+    machine = models.ForeignKey(Machine, related_name="machine_operation", on_delete=models.CASCADE )
     operation = models.ForeignKey(Operation, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
 
@@ -56,10 +56,10 @@ class Stats(models.Model):
     component= models.ForeignKey(Component,null=True, blank=True, on_delete=models.CASCADE)
     operation = models.ForeignKey(Operation,null=True, blank=True, on_delete=models.CASCADE)
     created_date = models.DateTimeField(auto_now_add=True)
-    TEMPRATURE = 'temprature'
+    TEMPRATURE = 'temperature'
     PRESSURE = 'pressure'
     TYPE_CHOICES = (
-        (TEMPRATURE,'temprature'),
+        (TEMPRATURE,'temperature'),
         (PRESSURE,'pressure'),
     )
     type = models.CharField(choices=TYPE_CHOICES,max_length=20)

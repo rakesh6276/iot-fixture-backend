@@ -90,6 +90,18 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'django_db',
+#         'USER': 'db_user',
+#         'PASSWORD': 'iot_fixture',
+#         'HOST': 'localhost',
+#         'PORT': '',                      # Set to empty string for default.
+#     }
+# }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

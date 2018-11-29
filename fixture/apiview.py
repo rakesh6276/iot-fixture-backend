@@ -5,20 +5,13 @@ from .models import Machine,Component,Operation,Stats
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from fixture.serializers import MachineSerializer, OperationSerializer, ComponentSerializer, StatSerializer, StatUpdateSerializer, ComponentSerializer1
+    # ,ComponentSerializer2
 from django.http import Http404
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.generics import UpdateAPIView, ListAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import UpdateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.decorators import api_view
 
-
-
-
-# class StatList(APIView):
-#     def get(self, request):
-#         stats = Stats.objects.all()
-#         data = StatSerializer(stats, many=True).data
-#         return Response(data)
 
 
 class QuerySet(APIView):
@@ -66,7 +59,7 @@ def editStats(request, pk):
 
 @api_view(['GET'])
 def Getlist(self):
-    queryset = Stats.objects.raw("SELECT id, machine_id, component_id, operation_id, min(created_date) startTime, max(created_date) endTime from fixture_stats group by machine_id, component_id, operation_id")
+    queryset = Stats.objects.raw("SELECT id, machine_id, component_id, operation_id, min(created_date) startTime, max(created_date) endTime from fixture_stats group by fixture_stats.id, machine_id, component_id, operation_id")
     # print(queryset)
     serializer = StatSerializer(queryset, many=True)
     return Response(serializer.data)
@@ -81,6 +74,7 @@ class putComponents(APIView):
             raise Http404
 
     def get(self, request, pk, format=None):
+        # comp= Component.objects.filter().order_by('machine__modified_date',).values('machine__current_operation','machine__created_date', 'machine__modified_date',)
         snippet = self.get_object(pk)
         serializer = ComponentSerializer1(snippet)
         return Response(serializer.data)
@@ -106,5 +100,51 @@ class getComponents(ListAPIView):
 #     serializer= OperationSerializer1(queryset, many=True)
 #     return Response(serializer.data)
 #     # print(queryset.query)
+
+
+# @api_view(['GET'])
+# def GetComps(self):
+#     queryset = Component.objects.filter().order_by('machine__modified_date', ).values('machine__current_operation','machine__created_date','machine__modified_date', )
+#     serializer = ComponentSerializer2(queryset, many=True)
+#     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def GetRealtimeData(self, machine_id, component_id):
+    stats1 = Stats.objects.all()
+    json_obj = []
+    types = []
+    ops = Operation.objects.all()
+    for i in ops:
+        if i.machine_id == machine_id:
+            ops_id = i.id
+    print(ops_id, machine_id, component_id)
+    for j in stats1:
+        print(j.component.id ,j.machine.id,j.operation.id)
+        if j.component.id == component_id and j.machine.id == machine_id and j.operation.id ==ops_id:
+            types.append({'type':j.type, 'value':j.value})
+    json_obj.append({'machine_id':machine_id, 'component_id':component_id,
+            'types':types})
+    # serializer = StatSerializer(json_obj,many = True)
+    return Response(json_obj)
+
+
+@api_view(['GET'])
+def GetPastOperation(self, machine_id, component_id):
+    stats = Stats.objects.all()
+    json_obj = []
+    operations = []
+    for i in stats:
+        if i.machine.id == machine_id and i.component.id == component_id:
+            values = []
+            values.append({'type':i.type, 'value':i.value})
+            operations.append({'operation_id':i.operation.id,'values':values})
+    json_obj.append({'machine_id':machine_id, 'component_id':component_id,'operations':operations})
+    return Response(json_obj)
+
+
+
+
+
 
 

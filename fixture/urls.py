@@ -1,6 +1,5 @@
 from django.urls import path
-from fixture.apiview import QuerySet, GetMachine, GetOperation, GetComponent, GetStats, editStats, Getlist,putComponents, \
-    getComponents
+from fixture.apiview import QuerySet, GetMachine, GetOperation, GetComponent, GetStats, editStats, Getlist,putComponents,GetRealtimeData,GetPastOperation,getComponents
     # Getoperation
     # editComponents
 
@@ -15,8 +14,9 @@ urlpatterns = [
     path('stats/list2/', Getlist, name='get_detail'),
     path('stats/comp/<int:pk>/', putComponents.as_view(), name='edit_detail'),
     path('stats/comp/', getComponents.as_view(), name='comp_detail'),
-    # path('stats/operation/', Getoperation, name='comp1_detail')
-    # path('stats/operation/', OperationList.as_view(), name = 'oper_list'),
+    # path('stats/filter/', GetComps, name='get_details'),
+    path('realtime_stream/<int:machine_id>/<int:component_id>/', GetRealtimeData),
+    path('past_operations/<int:machine_id>/<int:component_id>/', GetPastOperation),
 
 ]
 
